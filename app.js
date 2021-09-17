@@ -9,7 +9,7 @@ process.on('unhandledRejection', (reason, promise) => {
   logger.error({ operation: 'unhandledRejection', message: reason, data: promise });
 });
 
-app.use('/v1', express.static(`${__dirname}/../static`));
+app.use('/v1', express.static(`${__dirname}/static`));
 loaders({ app });
 
 module.exports = app;

@@ -6,7 +6,7 @@ const userRouter = require('./user.route');
 
 const app = express();
 
-app.use('/', (_, res) => {
+app.get('/', (_, res) => {
   return res.send({
     message: 'Index route',
   });

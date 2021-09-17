@@ -11,6 +11,7 @@
     "prettier:write": "prettier --write \"{*.js,**/*.js}\"",
     "test": "jest",
     "docs": "apidoc -i config/apidoc/ -o static/docs/",
+    "docs:production": "apidoc -c ./apidoc.prod.json -i config/apidoc/ -o static/docs/",
     "db:seed": "node ./config/seed/seeder.js",
     "prepare": "husky install"
   },
@@ -28,7 +29,7 @@
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
-    "mongoose": "^6.0.5",
+    "mongoose": "^5.13.9",
     "mongoose-seed": "^0.6.0",
     "uuid": "^8.3.2",
     "winston": "^3.3.3",

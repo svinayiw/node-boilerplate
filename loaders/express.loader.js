@@ -13,5 +13,15 @@ module.exports = ({ app }) => {
 
   app.use('/v1', routes);
 
+  app.get('/', (_, res) => {
+    res.redirect('/v1');
+  });
+
+  app.use((_, res) => {
+    res.send({
+      message: 'Route not found',
+    });
+  });
+
   app.use(errorHandler);
 };

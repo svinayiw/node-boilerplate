@@ -4,7 +4,7 @@
  * @param {number} args.limit
  * @param {string} args.sort
  * @param {Object} args.query
- * @returns {Promise<User|null>}
+ * @returns {Object} - { skip: number, limit: number, sort: { [field: string]: string }, query: any }
  */
 const getPagingArgs = (args = {}) => {
   let { skip = 0, limit = 50, sort = 'createdAt:desc', ...query } = args;
@@ -30,7 +30,7 @@ const getPagingArgs = (args = {}) => {
  * @param {string} args.sort
  * @param {number} args.total
  * @param {Object} args.query
- * @returns {Promise<User|null>}
+ * @returns {Object} - { total: number, startIndex: number, endIndex: number, hasNextPage: boolean }
  */
 const getPagingResult = (args = {}) => {
   const skip = args.skip || 0;

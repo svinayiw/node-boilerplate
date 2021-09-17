@@ -19,7 +19,36 @@ $ npm i
 $ npm run start:dev
 ```
 
-### `npm run test`
+### Generate API Docs
+
+Local: `npm run docs` \
+Production: `npm run docs:production` \
+
+### Seed database
+
+`npm run db:seed`
+
+## Using Docker
+
+Make sure docker and docker-compose is installed in your system
+
+```
+$ docker-compose up
+
+```
+
+In order to seed database:
+
+- First list the container using: `docker ps`
+
+- Seed the database: `docker exec [container_id] npm run db:seed`
+
+In order to generate api docs:
+
+Local - `docker exec [container_id] npm run docs` \
+Production - `docker exec [container_id] npm run docs:production`
+
+## `npm run test`
 
 Runs the test cases from the folder `test`
 
